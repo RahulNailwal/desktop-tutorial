@@ -1,0 +1,4 @@
+INSERT INTO VIDEOS values(301,'Understanding Maths','http://example.com/201',201,101);
+INSERT INTO VIDEOS values(302,'Understanding Science','http://example.com/202',202,102);
+INSERT INTO VIDEOS values(303,'Understanding History','http://example.com/203',203,103);
+INSERT INTO VIDEOS values(304,'Understanding Maths','http://example.com/204',204,104);

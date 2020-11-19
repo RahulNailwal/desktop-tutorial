@@ -1,0 +1,4 @@
+INSERT INTO COURSES values(101,'Mathematics','Provides a thorough understanding of the subject to anybody that is new to it');
+INSERT INTO COURSES values(102,'Science','Provides a thorough understanding of the subject to anybody that is new to it');
+INSERT INTO COURSES values(103,'History','Provides a thorough understanding of the subject to anybody that is new to it');
+INSERT INTO COURSES values(104,'Civics','Provides a thorough understanding of the subject to anybody that is new to it');
