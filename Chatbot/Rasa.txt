@@ -1,0 +1,58 @@
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey!
+    - Hello
+    - Good day
+    - Good morning
+
+- intent: subscribe
+  examples: |
+    - how many courses do you offer?
+- intent: inform
+  examples: |
+    - mathematics
+    - science
+    - agriculture
+
+
+responses:
+   utter_greet:
+       - text: |
+           Hello! How can I help you?
+   utter_ask_email:
+       - text: |
+           Which course are you looking for?
+   utter_subscribed:
+       - text: |
+           We offer 20 {email} courses!! 
+
+stories:
+ - story: greet and subscribe
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: subscribe
+   - action: newsletter_form
+   - active_loop: newsletter_form
+
+forms:
+  newsletter_form:
+    email:
+    - type: from_text
+
+rules:
+ - rule: activate subscribe form
+   steps:
+   - intent: subscribe
+   - action: newsletter_form
+   - active_loop: newsletter_form
+
+ - rule: submit form
+   condition:
+   - active_loop: newsletter_form
+   steps:
+   - action: newsletter_form
+   - active_loop: null
+   - action: utter_subscribed
